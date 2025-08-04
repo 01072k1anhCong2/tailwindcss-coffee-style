@@ -1,11 +1,14 @@
 // tailwind.config.js
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    screens:{
+      'xs':'480px',
+      ...defaultTheme.screens,
+    },
     extend: {
-      screens:{
-        'xs':'480px'
-      },
       fontFamily: {
         karla: ['Karla', 'sans-serif']
       },
